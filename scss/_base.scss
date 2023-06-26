@@ -1,0 +1,38 @@
+h1 {
+    color: black;
+    font-weight: bold;
+}
+
+body {
+    background-color: darkcyan;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background-color: rgb(1, 114, 114);
+    padding: 0;
+}
+
+p {
+    color: aliceblue;
+    margin-block: 2rem;
+    margin-inline: 5rem;
+}
+
+// barra de navegacion
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    //justify-content: right;
+    flex-direction: row;
+    list-style: none;
+
+    .nav_row {
+        margin: 0 10px;
+        text-align: left;
+        border-radius: 20%;
+        border: 5px solid black;
+        color: aliceblue;
+    }
+}

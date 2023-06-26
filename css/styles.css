@@ -1,6 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css");
 h1 {
   color: black;
+  font-weight: bold;
 }
 
 body {
@@ -15,17 +16,17 @@ header {
 
 p {
   color: aliceblue;
+  margin-block: 2rem;
+  margin-inline: 5rem;
 }
 
 .navegacion {
   display: flex;
   align-items: center;
-  justify-content: right;
   flex-direction: row;
   list-style: none;
 }
-
-.nav_row {
+.navegacion .nav_row {
   margin: 0 10px;
   text-align: left;
   border-radius: 20%;
@@ -33,6 +34,13 @@ p {
   color: aliceblue;
 }
 
+/* seccion entrevista */
+.entrevista p {
+  margin-block: 2rem;
+  margin-inline: 5rem;
+}
+
+/*Index*/
 .Noticia_principal {
   font-size: 100%;
 }
@@ -45,6 +53,7 @@ p {
 .principal img {
   max-width: 50%;
   max-height: 50%;
+  object-fit: none;
 }
 
 .Noticias {
@@ -55,6 +64,7 @@ p {
 .Noticias p {
   display: flex;
   flex-direction: column;
+  margin-left: 5rem;
 }
 .Noticias img {
   border-radius: 20%;
@@ -69,11 +79,8 @@ p {
   flex-direction: column;
   align-items: center;
 }
-
-h5 {
-  font-size: 30%;
-  text-align: left;
-  margin: 5%;
+.noticiasimg h3 {
+  font-weight: bold;
 }
 
 .primer_parrafo {
@@ -82,8 +89,136 @@ h5 {
   justify-content: right;
   flex-direction: row;
   list-style: none;
+  margin-block: 3rem;
 }
 
+/* Seccion Noticia */
+h3 {
+  font-weight: bold;
+}
+
+.primer_noticia img {
+  max-width: 50%;
+  max-height: 50%;
+  object-fit: none;
+}
+
+.segunda_noticia img {
+  max-width: 50%;
+  max-height: 50%;
+  object-fit: contain;
+}
+
+nav ul {
+  justify-content: center;
+  padding: 0;
+}
+nav ul a {
+  text-decoration: none;
+}
+nav ul a li {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+nav ul a li:hover {
+  background-color: #333;
+  color: #fff;
+}
+nav.animated ul {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.3s;
+}
+nav.animated ul.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Estilos personalizados bootstrap */
+body {
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.navegacion {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navegacion a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav_row {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+span {
+  display: block;
+  text-align: start;
+  margin-bottom: 5rem;
+  font-size: 140%;
+  margin-block: 3rem;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+p {
+  text-align: justify;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pie {
+  margin-bottom: 10px;
+}
+
+.Redes_Sociales {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.redes {
+  margin: 0 10px;
+}
+
+.Suscripcion {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+input[type=email] {
+  margin-left: 5px;
+  padding: 5px;
+}
+
+/*footer*/
 footer {
   background-color: rgb(1, 114, 114);
   width: 100%;
@@ -116,11 +251,14 @@ footer {
   padding: 0;
   margin: 0;
 }
+.pie h3 {
+  font-weight: bold;
+}
+.pie h4 {
+  font-weight: bold;
+}
 
-/*responsive de index*/
-/*hasta 400 pixel se aplica esta configuracion cuando la
-  pantalla se hace mas chica */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 700px) {
   .Redes_Sociales {
     display: flex;
     justify-content: left;
@@ -140,6 +278,7 @@ footer {
   .principal img {
     max-width: 25%;
     max-height: 25%;
+    object-fit: contain;
   }
   #nombre_pagina h1 {
     font-size: 150%;
@@ -219,7 +358,7 @@ footer {
     max-height: 100%;
   }
 }
-@media screen and (min-width: 401px) {
+@media screen and (min-width: 701px) {
   .navegacion {
     display: flex;
     align-items: center;
@@ -262,116 +401,9 @@ footer {
     display: block;
   }
 }
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-}
-nav ul a {
-  text-decoration: none;
-}
-nav ul a li {
-  padding: 10px 20px;
-  margin: 0 5px;
-  color: #333;
-  transition: all 0.5s;
-  cursor: pointer;
-}
-nav ul a li:hover {
-  background-color: #333;
-  color: #fff;
-}
-nav.animated ul {
-  transform: translateY(-100%);
-  opacity: 0;
-  transition: all 0.5s;
-}
-nav.animated ul.active {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-/* Estilos personalizados bootstrap */
-body {
-  padding: 20px;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.navegacion {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.navegacion a {
-  text-decoration: none;
-  color: black;
-}
-
-.nav_row {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-span {
-  display: block;
-  text-align: center;
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-h2 {
-  text-align: center;
-}
-
-p {
-  text-align: justify;
-}
-
-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-}
-
-footer {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.pie {
-  margin-bottom: 10px;
-}
-
-.Redes_Sociales {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.redes {
-  margin: 0 10px;
-}
-
-.Suscripcion {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-input[type=email] {
-  margin-left: 5px;
-  padding: 5px;
+.span {
+  padding-left: 6rem;
+  font-size: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
